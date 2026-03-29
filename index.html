@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD Senpai's Studio | Gallery of Legends</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOURID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-YOURID');
+    </script>
+
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #0f0f0f;
+            --card: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation with Cart Counter */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #333;
+            background: rgba(15, 15, 15, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 2px solid var(--gold);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--gold);
+            letter-spacing: 5px;
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #888;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product-card {
+            background: var(--card);
+            border: 1px solid #333;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+        }
+
+        .product-img img {
+            border-radius: 8px;
+            margin-bottom: 15px;
+            object-fit: contain;
+            background: #252525;
+        }
+
+        .price {
+            color: var(--gold);
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .add-btn {
+            background-color: var(--gold);
+            color: black;
+            border: none;
+        }
+
+        .add-btn:hover {
+            background-color: #f1c40f;
+        }
+
+        .details-btn {
+            background-color: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .details-btn:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        /* Notification Toast */
+        #notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: var(--gold);
+            padding: 15px 25px;
+            border-left: 5px solid var(--gold);
+            border-radius: 4px;
+            display: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div style="font-weight: bold; color: var(--gold);">AD SENPAI</div>
+        <div style="font-weight: bold;">🛒 CART: <span id="cart-count" style="color: var(--gold);">0</span></div>
+    </nav>
+
+    <header>
+        <h1>AD SENPAI'S STUDIO</h1>
+        <p class="tagline">UNLEASH THE POWER. DEFINE YOUR LEGEND.</p>
+    </header>
+
+    <div class="gallery">
+        <div class="product-card">
+            <div class="product-img">
+                <img src="https://images-cdn.ubuy.co.in/634ec0ed0ed9a21327070408-funko-pop-animation-naruto-naruto.jpg"
+                    height="180" width="180">
+            </div>
+            <h3>Naruto Uzumaki</h3>
+            <p>Limited Edition Series</p>
+            <div class="price">$45.00</div>
+            <div class="btn-group">
+                <button class="add-btn" data-product="Naruto Figure" data-price="45">Add to Cart</button>
+                <button class="details-btn" data-product="Naruto Figure">Intel/Details</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="https://m.media-amazon.com/images/I/61fRICQrRIL._AC_UF1000,1000_QL80_.jpg" height="180"
+                    width="180">
+            </div>
+            <h3>Son Goku</h3>
+            <p>Masterlise High-Detail</p>
+            <div class="price">$65.00</div>
+            <div class="btn-group">
+                <button class="add-btn" data-product="Goku Figure" data-price="65">Add to Cart</button>
+                <button class="details-btn" data-product="Goku Figure">Intel/Details</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="https://m.media-amazon.com/images/I/71K2hBR-jGL.jpg" height="180" width="180">
+            </div>
+            <h3>Naruto Funko</h3>
+            <p>Vinyl Collectible</p>
+            <div class="price">$15.00</div>
+            <div class="btn-group">
+                <button class="add-btn" data-product="Naruto Funko" data-price="15">Add to Cart</button>
+                <button class="details-btn" data-product="Naruto Funko">Intel/Details</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification">Item Added to Collection!</div>
+
+    <script>
+        let cartItems = 0;
+        const cartCounter = document.getElementById('cart-count');
+        const notification = document.getElementById('notification');
+
+        function showNotification(msg) {
+            notification.innerText = msg;
+            notification.style.display = 'block';
+            setTimeout(() => { notification.style.display = 'none'; }, 3000);
+        }
+
+        // --- ADD TO CART LOGIC ---
+        document.querySelectorAll('.add-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                cartItems++;
+                cartCounter.innerText = cartItems;
+                const productName = this.getAttribute('data-product');
+                const price = this.getAttribute('data-price');
+
+                // GA4 Event: add_to_cart
+                gtag('event', 'add_to_cart', {
+                    'item_name': productName,
+                    'value': parseFloat(price),
+                    'currency': 'USD'
+                });
+
+                showNotification(productName + " added to Cart!");
+            });
+        });
+
+        // --- VIEW DETAILS LOGIC ---
+        document.querySelectorAll('.details-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const productName = this.getAttribute('data-product');
+
+                // GA4 Event: view_item
+                gtag('event', 'view_item', {
+                    'item_name': productName
+                });
+
+                showNotification("Loading intel for " + productName + "...");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
