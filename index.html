@@ -13,148 +13,43 @@
         gtag('js', new Date());
         gtag('config', 'G-C4Q31PLNC5');
     </script>
+
     <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w3ko5dvsru");
-</script>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "w3ko5dvsru");
+    </script>
 
     <style>
-        :root {
-            --gold: #d4af37;
-            --dark: #0f0f0f;
-            --card: #1a1a1a;
-        }
+        :root { --gold: #d4af37; --dark: #0f0f0f; --card: #1a1a1a; }
+        body { background-color: var(--dark); color: #e0e0e0; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
 
-        body {
-            background-color: var(--dark);
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #333; background: rgba(15,15,15,0.9); position: sticky; top: 0; z-index: 100; }
+        header { text-align: center; padding: 60px 0; border-bottom: 2px solid var(--gold); margin-bottom: 40px; }
+        h1 { color: var(--gold); letter-spacing: 5px; font-size: 3rem; margin: 0; }
+        .tagline { font-style: italic; color: #888; text-align: center; }
 
-        /* Navigation with Cart Counter */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            border-bottom: 1px solid #333;
-            background: rgba(15, 15, 15, 0.9);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; padding: 20px; }
+        .product-card { background: var(--card); border: 1px solid #333; padding: 25px; border-radius: 12px; text-align: center; transition: 0.3s; }
+        .product-card:hover { transform: translateY(-10px); border-color: var(--gold); }
+        .product-img img { border-radius: 8px; margin-bottom: 15px; object-fit: contain; background: #252525; }
 
-        header {
-            text-align: center;
-            padding: 60px 0;
-            border-bottom: 2px solid var(--gold);
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            color: var(--gold);
-            letter-spacing: 5px;
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        .tagline {
-            font-style: italic;
-            color: #888;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .product-card {
-            background: var(--card);
-            border: 1px solid #333;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold);
-        }
-
-        .product-img img {
-            border-radius: 8px;
-            margin-bottom: 15px;
-            object-fit: contain;
-            background: #252525;
-        }
-
-        .price {
-            color: var(--gold);
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        button {
-            padding: 12px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-            border-radius: 5px;
-            text-transform: uppercase;
-        }
-
-        .add-btn {
-            background-color: var(--gold);
-            color: black;
-            border: none;
-        }
-
-        .add-btn:hover {
-            background-color: #f1c40f;
-        }
-
-        .details-btn {
-            background-color: transparent;
-            color: var(--gold);
-            border: 2px solid var(--gold);
-        }
-
-        .details-btn:hover {
-            background-color: rgba(212, 175, 55, 0.1);
-        }
+        .price { color: var(--gold); font-size: 1.4rem; font-weight: bold; margin: 10px 0; }
+        .btn-group { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+        
+        button { padding: 12px; cursor: pointer; font-weight: bold; border-radius: 5px; text-transform: uppercase; transition: 0.3s; }
+        .add-btn { background: var(--gold); color: black; border: none; }
+        .details-btn { background: transparent; color: var(--gold); border: 2px solid var(--gold); }
 
         /* Notification Toast */
-        #notification {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #333;
-            color: var(--gold);
-            padding: 15px 25px;
-            border-left: 5px solid var(--gold);
-            border-radius: 4px;
-            display: none;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-        }
+        #notification { position: fixed; bottom: 20px; right: 20px; background: #333; color: var(--gold); padding: 15px 25px; border-left: 5px solid var(--gold); display: none; z-index: 1000; }
+
+        /* Modal Style */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); }
+        .modal-content { background: #1a1a1a; margin: 10% auto; padding: 30px; border: 1px solid var(--gold); width: 80%; max-width: 450px; border-radius: 15px; text-align: center; position: relative; }
+        .close { position: absolute; right: 20px; top: 10px; color: #fff; font-size: 30px; cursor: pointer; }
     </style>
 </head>
 
@@ -172,53 +67,42 @@
 
     <div class="gallery">
         <div class="product-card">
-            <div class="product-img">
-                <img src="https://images-cdn.ubuy.co.in/634ec0ed0ed9a21327070408-funko-pop-animation-naruto-naruto.jpg"
-                    height="180" width="180">
-            </div>
+            <div class="product-img"><img src="https://images-cdn.ubuy.co.in/634ec0ed0ed9a21327070408-funko-pop-animation-naruto-naruto.jpg" height="180" width="180"></div>
             <h3>Naruto Uzumaki</h3>
-            <p>Limited Edition Series</p>
             <div class="price">$45.00</div>
             <div class="btn-group">
                 <button class="add-btn" data-product="Naruto Figure" data-price="45">Add to Cart</button>
-                <button class="details-btn" data-product="Naruto Figure">Intel/Details</button>
+                <button class="details-btn" data-product="Naruto Figure" data-desc="Limited Edition Glow-in-the-dark vinyl collectible. A must-have for the Hidden Leaf fans.">Intel/Details</button>
             </div>
         </div>
 
         <div class="product-card">
-            <div class="product-img">
-                <img src="https://m.media-amazon.com/images/I/61fRICQrRIL._AC_UF1000,1000_QL80_.jpg" height="180"
-                    width="180">
-            </div>
+            <div class="product-img"><img src="https://m.media-amazon.com/images/I/61fRICQrRIL._AC_UF1000,1000_QL80_.jpg" height="180" width="180"></div>
             <h3>Son Goku</h3>
-            <p>Masterlise High-Detail</p>
             <div class="price">$65.00</div>
             <div class="btn-group">
                 <button class="add-btn" data-product="Goku Figure" data-price="65">Add to Cart</button>
-                <button class="details-btn" data-product="Goku Figure">Intel/Details</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-img">
-                <img src="https://m.media-amazon.com/images/I/71K2hBR-jGL.jpg" height="180" width="180">
-            </div>
-            <h3>Naruto Funko</h3>
-            <p>Vinyl Collectible</p>
-            <div class="price">$15.00</div>
-            <div class="btn-group">
-                <button class="add-btn" data-product="Naruto Funko" data-price="15">Add to Cart</button>
-                <button class="details-btn" data-product="Naruto Funko">Intel/Details</button>
+                <button class="details-btn" data-product="Goku Figure" data-desc="Masterlise High-Detail Series. Features battle-damaged gi and Ultra Instinct aura.">Intel/Details</button>
             </div>
         </div>
     </div>
 
-    <div id="notification">Item Added to Collection!</div>
+    <div id="intelModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="modalTitle" style="color: var(--gold);"></h2>
+            <p id="modalDesc" style="line-height: 1.6;"></p>
+            <button class="add-btn" id="modalBuyBtn">Secure Item</button>
+        </div>
+    </div>
+
+    <div id="notification"></div>
 
     <script>
         let cartItems = 0;
         const cartCounter = document.getElementById('cart-count');
         const notification = document.getElementById('notification');
+        const modal = document.getElementById('intelModal');
 
         function showNotification(msg) {
             notification.innerText = msg;
@@ -226,40 +110,37 @@
             setTimeout(() => { notification.style.display = 'none'; }, 3000);
         }
 
-        // --- ADD TO CART LOGIC ---
-        document.querySelectorAll('.add-btn').forEach(button => {
+        // --- ADD TO CART ---
+        document.querySelectorAll('.add-btn, #modalBuyBtn').forEach(button => {
             button.addEventListener('click', function () {
                 cartItems++;
                 cartCounter.innerText = cartItems;
-                const productName = this.getAttribute('data-product');
-                const price = this.getAttribute('data-price');
-
-                // GA4 Event: add_to_cart
-                gtag('event', 'add_to_cart', {
-                    'item_name': productName,
-                    'value': parseFloat(price),
-                    'currency': 'USD'
-                });
-
-                showNotification(productName + " added to Cart!");
+                const productName = this.getAttribute('data-product') || "Legendary Item";
+                
+                gtag('event', 'add_to_cart', { 'item_name': productName });
+                showNotification(productName + " added to collection!");
+                modal.style.display = "none";
             });
         });
 
-        // --- VIEW DETAILS LOGIC ---
+        // --- VIEW DETAILS (MODAL) ---
         document.querySelectorAll('.details-btn').forEach(button => {
             button.addEventListener('click', function () {
-                const productName = this.getAttribute('data-product');
+                const name = this.getAttribute('data-product');
+                const desc = this.getAttribute('data-desc');
 
-                // GA4 Event: view_item
-                gtag('event', 'view_item', {
-                    'item_name': productName
-                });
+                document.getElementById('modalTitle').innerText = name + " Intel";
+                document.getElementById('modalDesc').innerText = desc;
+                document.getElementById('modalBuyBtn').setAttribute('data-product', name);
 
-                showNotification("Loading intel for " + productName + "...");
+                gtag('event', 'view_item', { 'item_name': name });
+                modal.style.display = "block";
             });
         });
+
+        document.getElementById('closeModal').onclick = () => modal.style.display = "none";
+        window.onclick = (e) => { if(e.target == modal) modal.style.display = "none"; }
     </script>
 
 </body>
-
 </html>
